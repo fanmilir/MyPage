@@ -19,4 +19,14 @@
 ![报错图](https://raw.githubusercontent.com/fanmilir/GithubPic/master/Touching_JavaScript/Lesson2-Q-UpdatePrFromTerminalError.jpeg)
 
 ### 3、Markdown文件里显示图片的地址来源：
-为了在markdown文件里面显示图片，也是网上搜索，方法是图片上传git项目后生成https://raw...链接地址。方法里说是可以点击Raw按钮，可我上传后点击只有Download和 
+为了在markdown文件里面显示图片，也是网上搜索，方法是图片上传git项目后生成https://raw... 的链接地址。
+
+方法里说是可以点击Raw按钮，可我上传后点击只有Download和History两个按钮，如下图：
+
+然后用Download后在页面地址栏获得的地址，如下图：
+
+
+为什么我的图片文件看不到Raw按钮？
+在GitHub里调用图片，都是用这种方法吗？
+Github能支持哪些格式的图片？
+
