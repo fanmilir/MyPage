@@ -3,33 +3,81 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>新生大学</title>
+    <title>Github新生记录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/style.css">
+    <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-<div>
+<div id="app">
   <div class="main-header">
     <div class="container">
-      <h1>JavaScript编程入门</h1>
+      <h1 class="title">{{ title }}</h1>
+      <div>
+        <img class="avatar"
+          src="https://ws2.sinaimg.cn/large/006tNc79ly1ficho8d5amj30hs0hsdg6.jpg">
+        </img>
+        <div class="teacher-info-pannel">
+          <p class="teacher-info-item">ID:fanmilir</p>
+          <p class="teacher-info-item">Email:qing_fn@hotmail.com</p>
+        </div>
+      </div>
     </div>
+
+    ##<div class="xingda">
+      ##<img src="https://o4a7cbihz.qnssl.com/picture/57140c0c-4ffa-4dde-9757-570b53f96796"></img>
+      ##<a href="https://xinshengdaxue.com">新生大学出品</a>
+    ##</div>
   </div>
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=40">
+            <img src="https://o4a7cbihz.qnssl.com/avatar/614bb7be-491b-4c23-be79-0bb504ec54f6">
+            <div class="caption">
+              <p>课程介绍</p>
+            </div>
+          </a>
+          <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=37">
+            <img src="https://o4a7cbihz.qnssl.com/avatar/7fb78070-b2a0-4d09-8cb6-d687e2e238ec">
+            <div class="caption">
+              <p>课程介绍</p>
+            </div>
+          </a>
+          <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=38">
+            <img src="https://o4a7cbihz.qnssl.com/avatar/a644385c-7254-42b8-8221-3bda478093ef">
+            <div class="caption">
+              <p>课程介绍</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 15px">
+        <a type="button" class="btn btn-default btn-small" href="https://github.com/fanmilir/touching-JavaScript">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> touching-javascript
+        </a>
+        <a type="button" class="btn btn-default btn-small" href="https://github.com/fanmilir/touching-PythonforDataAnalysis">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true">
+          </span> touching-PythonforDataAnalysis
+        </a>
+        <a type="button" class="btn btn-default btn-small" href="https://github.com/fanmilir/touching-Java_AndroidStudio">
+          <span class="glyphicon glyphicon-heart" aria-hidden="true">
+          </span> touching-Java_AndroidStudio
+        </a>
+      </div>
+
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">JavaScript编程入门</h3>
+          <h3 class="panel-title">文档</h3>
         </div>
         <div class="panel-body">
-          <li class="list-group-item">
-            <a href="https://xugy0926.github.io/getting-started-with-javascript/">
-              新生大学JS编程入门项目[getting-started-with-javascript]
-            </a>
-          </li>
-          <li class="list-group-item">
-            <a href="https://github.com/xugy0926/words-from-the-heart">
-              新生大学JS编程入门心里话[getting-started-with-javascript]
+          <li class="list-group-item" v-for="topic in topics">
+            <a :href="topic.url">
+              {{ topic.title }}
             </a>
           </li>
         </div>
@@ -37,5 +85,32 @@
     </div>
   </div>
 </div>
+<div class="footer">
+  <img class="avatar" src="https://ws2.sinaimg.cn/large/006tNc79ly1ficho8d5amj30hs0hsdg6.jpg"></img>
+</div>
 </body>
 </html>
+<script>
+
+var topics = [{
+    title: 'JavaScript预热--说说心里话',
+    url: 'https://github.com/fanmilir/touching-JavaScript/blob/master/JavaScript%E9%A2%84%E7%83%AD--%E8%AF%B4%E8%AF%B4%E5%BF%83%E9%87%8C%E8%AF%9D.md'
+  }, {
+    title: 'JavaScript第一课学习',
+    url: 'https://github.com/fanmilir/touching-JavaScript/blob/master/JavaScript%E7%AC%AC%E4%B8%80%E8%AF%BE%E5%AD%A6%E4%B9%A0.md'
+  }, {
+    title: 'JavaScript第二课学习',
+    url: 'https://github.com/fanmilir/touching-JavaScript/blob/master/JavaScript%E7%AC%AC%E4%BA%8C%E8%AF%BE%E5%AD%A6%E4%B9%A0.md'
+  }];
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    title: 'JavaScript编程入门',
+    teacher: '徐高阳',
+    startTime: '2017/08/08',
+    endTime: '2017/09/04',
+    topics: topics
+  }
+})
+</script>
