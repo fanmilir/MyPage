@@ -19,16 +19,16 @@
           src="https://ws2.sinaimg.cn/large/006tNc79ly1ficho8d5amj30hs0hsdg6.jpg">
         </img>
         <div class="teacher-info-pannel">
-          <p class="teacher-info-item">ID:fanmilir</p>
-          <p class="teacher-info-item">Email:qing_fn@hotmail.com</p>
+          <p class="teacher-info-item">ID:<span>{{ teacher }}</span></p>
+          <p class="teacher-info-item">Email:<span>{{ Email }}</span></p>
         </div>
       </div>
     </div>
 
-    ##<div class="xingda">
-      ##<img src="https://o4a7cbihz.qnssl.com/picture/57140c0c-4ffa-4dde-9757-570b53f96796"></img>
-      ##<a href="https://xinshengdaxue.com">新生大学出品</a>
-    ##</div>
+    <div class="xingda">
+      <img src="http://cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png"></img>
+      <a href="http://www.jianshu.com/u/ec4dc37a41df"></a>
+    </div>
   </div>
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
@@ -37,18 +37,6 @@
         <div class="col-sm-6 col-md-4">
           <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=40">
             <img src="https://o4a7cbihz.qnssl.com/avatar/614bb7be-491b-4c23-be79-0bb504ec54f6">
-            <div class="caption">
-              <p>课程介绍</p>
-            </div>
-          </a>
-          <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=37">
-            <img src="https://o4a7cbihz.qnssl.com/avatar/7fb78070-b2a0-4d09-8cb6-d687e2e238ec">
-            <div class="caption">
-              <p>课程介绍</p>
-            </div>
-          </a>
-          <a class="thumbnail" href="https://www.xinshengdaxue.com/lessons/details?course_id=38">
-            <img src="https://o4a7cbihz.qnssl.com/avatar/a644385c-7254-42b8-8221-3bda478093ef">
             <div class="caption">
               <p>课程介绍</p>
             </div>
@@ -107,9 +95,8 @@ var app = new Vue({
   el: '#app',
   data: {
     title: 'JavaScript编程入门',
-    teacher: '徐高阳',
-    startTime: '2017/08/08',
-    endTime: '2017/09/04',
+    ID: 'fanmilir',
+    Email: 'qing_fn@hotmail.com',
     topics: topics
   }
 })
